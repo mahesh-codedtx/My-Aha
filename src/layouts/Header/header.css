@@ -1,0 +1,153 @@
+.flex {
+  display: flex;
+}
+.sign-in-div {
+  gap: 8px;
+  align-items: center;
+}
+.sign-in-text {
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0;
+  margin: 0;
+}
+.header-drop-down-list {
+  background: #29292966;
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: #29292966;
+  width: 6.1rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.625rem;
+  font-family: proximaNova, sans-serif;
+  overflow: hidden;
+  padding: 0.8rem;
+}
+.drop-down-option {
+  padding: 0.8rem;
+  color: #fff;
+  width: 2.6rem;
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+}
+.header-container {
+  z-index: 99;
+  width: 98%;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+  top: 0;
+  left: 0;
+  color: #fff;
+}
+.header-top-page {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.92) 6%,
+    rgba(0, 0, 0, 0.45) 63%,
+    rgba(0, 0, 0, 0)
+  );
+}
+.header-scrolled {
+  background: rgb(29, 30, 32);
+}
+.header-list {
+  list-style-type: none;
+  display: flex;
+  text-transform: capitalize;
+  gap: 24px;
+}
+.header-list li {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 0.5;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.cursor {
+  cursor: pointer;
+}
+@media screen and (max-width: 1269px) {
+  .header-list {
+    display: none;
+  }
+  .header-right {
+    display: none;
+  }
+  .header-container {
+    padding: 20px;
+  }
+  .header-menu-icon {
+    display: block;
+    padding-right: 10px;
+  }
+}
+@media screen and (min-width: 1270px) {
+  .header-menu-icon {
+    display: none;
+  }
+}
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  position: fixed;
+  top: 10px;
+  right: 10px; /* Positioned to the right */
+  z-index: 1000;
+  transition: right 0.3s;
+}
+
+/* Move the menu icon along with the side nav */
+.menu-icon.icon-move {
+  right: 260px; /* Adjust this value based on the width of your side nav */
+}
+
+/* Side navigation styling */
+.side-nav {
+  height: 100%;
+  width: 250px; /* Set width of the side nav */
+  position: fixed;
+  top: 0;
+  right: -250px; /* Initially hidden */
+  background-color: #111;
+  overflow-x: hidden;
+  transition: right 0.3s;
+  padding-top: 60px;
+}
+
+.side-nav.open {
+  right: 0; /* Slide into view */
+}
+
+.side-nav a {
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  background-color: #575757;
+}

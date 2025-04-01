@@ -1,0 +1,21 @@
+.aha-btn {
+  color: #fff;
+  font-size: 14px;
+  font-family: proximaNova, sans-serif;
+  padding: 12px 23px;
+  font-weight: 500;
+  box-shadow: 0 4px 4px #00000040;
+  border: none;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.orange-bg {
+  background: linear-gradient(0deg, #b61a09 -86.4%, #ff6d2e);
+}
+.black-bg {
+  background: #1a1d1e;
+  border: 1px solid #35393f;
+}

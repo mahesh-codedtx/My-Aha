@@ -1,0 +1,64 @@
+.single-image-container {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &:hover {
+    transform: translateY(-15px);
+  }
+}
+
+.image-size {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  /* width: 160px;
+  height: 240px; */
+}
+.premium-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 7px;
+  background-image: linear-gradient(180deg, #ff6d2e 28.63%, #dd461d);
+  border-radius: 0px 0px 0px 10px;
+}
+.premium-text {
+  font-size: 10px;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.overlay-play-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+.overlay-text-container {
+  position: absolute;
+  bottom: 0px;
+  padding: 5px 0;
+  width: 100%;
+  z-index: 1;
+}
+.overlay-text {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0px 10px;
+}
+.single-image-text {
+  width: 160px;
+  font-size: 16px;
+  color: #fff;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,30 @@
+.hero-thumb-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+.hero-thumb-container {
+  display: flex;
+  align-items: center;
+}
+.hero-thumb-arrow {
+  height: fit-content;
+  background: none;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.thumbnail.active {
+  opacity: 1;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  transform: scale(150%);
+}

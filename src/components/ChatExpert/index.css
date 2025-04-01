@@ -1,0 +1,29 @@
+.chat-btn-container {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  z-index: 99;
+  transition: transform 1s;
+}
+.chat-btn {
+  background: #d77938;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  padding: 0 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 46px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.chat-btn:focus {
+  border: none;
+  outline: none;
+}
