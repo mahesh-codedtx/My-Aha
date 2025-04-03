@@ -9,7 +9,7 @@ const ImagescrollContainer = ({
   movies,
   className,
 }: {
-  movies: IMoviesSection;
+  movies: any;
   className: string;
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -56,9 +56,12 @@ const ImagescrollContainer = ({
     }
   };
 
+  //API DATA
+  // console.log(movies.cd[0]);
+
   return (
     <section>
-      <HorizontalListHeader sectionTitle={movies.heading} />
+      <HorizontalListHeader sectionTitle={movies.lon[0].n} />
       <div className="image-scroll-container" style={{ padding: "0" }}>
         <div
           className="icon-position prev"
@@ -75,7 +78,7 @@ const ImagescrollContainer = ({
           }}
           className="image-scroll-container"
         >
-          {movies.moviesArr.map((movie, index) => {
+          {movies.cd.map((movie: any, index: any) => {
             return (
               <div className={`image-scroll-container-img ${className}`}>
                 <JumpCard

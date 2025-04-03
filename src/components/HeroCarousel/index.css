@@ -6,7 +6,6 @@
   object-fit: contain;
 }
 .hero-carousel-container {
-  position: relative;
 }
 .hero-content-container {
   position: absolute;

@@ -1,11 +1,11 @@
 import "./header.css";
-import { IoMenu } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
 import logo from "../../assets/icons/aha-logo.svg";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { headerList } from "../../utils/header";
 import AhaButton from "../../components/MyButton";
+import { useLandingScreenData } from "../../hooks/useLandingScreenData";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -34,6 +34,13 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  //API--------------------------------------------------------------
+  const { data, loading, error } = useLandingScreenData();
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
+  if (!data) return <p>No data available</p>;
+
   return (
     <section
       className={`header-container ${
@@ -48,7 +55,7 @@ const Header = () => {
           <img src={logo} className="cursor" style={{ width: "100%" }}></img>
         </div>
         <ul className="header-list">
-          {headerList.map((header, index) => {
+          {data.t.map((header: any, index: number) => {
             return (
               <>
                 <li
@@ -57,11 +64,28 @@ const Header = () => {
                   style={{ gap: "5px" }}
                   onClick={() => navigate(header.pageLink)}
                 >
-                  {header.title}
+                  {header.lon[0].n === "All" ? "Home" : header.lon[0].n}
                 </li>
               </>
             );
           })}
+          {headerList.map((header, index) => {
+            return (
+              index > 2 && (
+                <li
+                  key={index}
+                  className="cursor flex"
+                  style={{ gap: "5px" }}
+                  onClick={() => navigate(header.pageLink)}
+                >
+                  {header.title}
+                </li>
+              )
+            );
+          })}
+          {/* <li className="cursor flex">Dance Ikon</li>
+          <li className="cursor flex">Offers</li>
+          <li className="cursor flex">My Aha</li> */}
         </ul>
       </div>
       <div className="header-right">

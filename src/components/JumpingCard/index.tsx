@@ -1,21 +1,27 @@
 import { IMovies } from "../../utils/Home/movies";
+import { constructImageUrl } from "../ImageResizer/imageResizer";
 import "./index.css";
 import { TiTick } from "react-icons/ti";
 const JumpCard = ({
   movie,
   isRoundedImage,
 }: {
-  movie: IMovies;
+  movie: any;
   isRoundedImage: boolean;
 }) => {
+  console.log(movie.ent[0].sp);
   return (
     <section>
       <div className="single-image-container">
         <div className="image-size cursor">
           <img
             src={
-              movie.movieImg ||
-              "https://www.aha.video/aha-gray-logo.29a310bfcc08d0e8.svg"
+              constructImageUrl(
+                `${movie.id}`,
+                movie.ia[2],
+                305,
+                `${movie.ut}`
+              ) || "https://www.aha.video/aha-gray-logo.29a310bfcc08d0e8.svg"
             }
             style={{
               width: "100%",
@@ -23,7 +29,7 @@ const JumpCard = ({
               borderRadius: `${isRoundedImage ? "50%" : "8px"}`,
             }}
           />
-          {movie.isPremium && (
+          {!movie.ent[0].sp && (
             <div className="premium-tag">
               <TiTick size={12} />
               <p className="premium-text">Premium</p>
@@ -42,7 +48,7 @@ const JumpCard = ({
           )}
         </div>
         <div style={{ textAlign: "left" }}>
-          <p className="single-image-text">{movie.movieTitle}</p>
+          <p className="single-image-text">{movie.lon[0].n}</p>
         </div>
       </div>
     </section>
