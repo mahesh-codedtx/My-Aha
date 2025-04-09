@@ -1,6 +1,11 @@
 .sample-class {
   width: 160px;
 }
+@media screen and (max-width: 900px) {
+  .sample-class {
+    width: 120px;
+  }
+}
 .kids-class {
   width: 212px;
 }

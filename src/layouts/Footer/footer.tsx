@@ -6,7 +6,9 @@ import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <section style={{ padding: "34px 0 24px" }}>
+    <section
+      style={{ padding: "34px 0 24px", fontFamily: "Proxima Nova, sans-serif" }}
+    >
       <div>
         <div className="flex footer-content">
           <div className="footer-left-social">

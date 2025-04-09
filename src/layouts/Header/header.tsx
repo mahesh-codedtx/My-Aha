@@ -71,7 +71,7 @@ const Header = () => {
           })}
           {headerList.map((header, index) => {
             return (
-              index > 2 && (
+              index > 3 && (
                 <li
                   key={index}
                   className="cursor flex"
@@ -91,6 +91,7 @@ const Header = () => {
       <div className="header-right">
         <IoIosSearch size={24} className="cursor" />
         <select className="header-drop-down-list cursor">
+          <option className="drop-down-option">Tamil</option>
           <option className="drop-down-option">Telugu</option>
         </select>
         <AhaButton

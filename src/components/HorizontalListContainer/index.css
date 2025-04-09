@@ -7,3 +7,10 @@
   font-size: 24px;
   font-weight: 600;
 }
+@media screen and (max-width: 900px) {
+  .h-list-container {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 16px 0;
+  }
+}

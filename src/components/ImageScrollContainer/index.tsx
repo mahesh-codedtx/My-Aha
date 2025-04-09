@@ -15,7 +15,7 @@ const ImagescrollContainer = ({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
-
+  console.log(containerRef);
   const checkScrollPosition = () => {
     if (containerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
@@ -58,10 +58,12 @@ const ImagescrollContainer = ({
 
   //API DATA
   // console.log(movies.cd[0]);
-
   return (
     <section>
-      <HorizontalListHeader sectionTitle={movies.lon[0].n} />
+      <HorizontalListHeader
+        sectionTitle={movies.lon[0].n}
+        containerLength={movies.cd.length}
+      />
       <div className="image-scroll-container" style={{ padding: "0" }}>
         <div
           className="icon-position prev"
@@ -83,7 +85,9 @@ const ImagescrollContainer = ({
               <div className={`image-scroll-container-img ${className}`}>
                 <JumpCard
                   movie={movie}
+                  imageAspectRatio={movies.iar}
                   isRoundedImage={movies.isRoundedImage}
+                  textClassName={className}
                 />
               </div>
             );

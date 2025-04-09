@@ -4,21 +4,25 @@ import "./index.css";
 import { TiTick } from "react-icons/ti";
 const JumpCard = ({
   movie,
+  imageAspectRatio,
   isRoundedImage,
+  textClassName,
 }: {
   movie: any;
+  imageAspectRatio: string;
   isRoundedImage: boolean;
+  textClassName: string;
 }) => {
-  console.log(movie.ent[0].sp);
+  console.log(movie.rat[0].v);
   return (
-    <section>
+    <section style={{ fontFamily: "Proxima Nova, sans-serif" }}>
       <div className="single-image-container">
         <div className="image-size cursor">
           <img
             src={
               constructImageUrl(
                 `${movie.id}`,
-                movie.ia[2],
+                imageAspectRatio,
                 305,
                 `${movie.ut}`
               ) || "https://www.aha.video/aha-gray-logo.29a310bfcc08d0e8.svg"
@@ -47,8 +51,9 @@ const JumpCard = ({
             </div>
           )}
         </div>
-        <div style={{ textAlign: "left" }}>
-          <p className="single-image-text">{movie.lon[0].n}</p>
+        <div className={`card-footer-text-container ${textClassName}`}>
+          <p className={`single-image-text `}>{movie.lon[0].n}</p>
+          {movie.rat[0].v === "A" && <div className="adult-rating">A</div>}
         </div>
       </div>
     </section>

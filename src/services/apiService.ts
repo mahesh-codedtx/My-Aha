@@ -1,7 +1,7 @@
-export const fetchLandingScreenData = async () => {
+export const fetchLandingScreenData = async (pageNumber: number = 1) => {
   try {
     const response = await fetch(
-      "https://catalog-service-cdn.api.aha.firstlight.ai/catalog/storefront/landingscreen?ipr=true&ivg=false&sfInfo=true&itvod=true&acl=ta&reg=in&dt=web&cPageNumber=1&cPageSize=5",
+      `https://catalog-service-cdn.api.aha.firstlight.ai/catalog/storefront/landingscreen?ipr=true&ivg=false&sfInfo=true&itvod=true&acl=ta&reg=in&dt=web&cPageNumber=${pageNumber}&cPageSize=5`,
       {
         method: "GET",
         headers: {

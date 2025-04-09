@@ -151,3 +151,9 @@
 .side-nav a:hover {
   background-color: #575757;
 }
+
+.header-list-side li {
+  &:hover {
+    background: #575757;
+  }
+}

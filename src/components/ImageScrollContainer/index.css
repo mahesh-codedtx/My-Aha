@@ -11,12 +11,13 @@
 .image-scroll-container > .image-scroll-container-img:first-child {
   padding-left: 30px;
 }
+
 .image-scroll-container > .image-scroll-container-img:last-child {
   padding-right: 30px;
 }
 .icon-position {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 2;
   /* display: flex; */
@@ -50,4 +51,14 @@
   z-index: 2;
 }
 .image-scroll-container-img {
+}
+@media screen and (max-width: 900px) {
+  .image-scroll-container > .image-scroll-container-img:first-child {
+    padding-left: 16px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .image-scroll-container > .image-scroll-container-img:last-child {
+    padding-right: 16px;
+  }
 }

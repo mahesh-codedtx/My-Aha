@@ -6,10 +6,12 @@ import { BrowserRouter } from "react-router-dom";
 import Header from "./layouts/Header/header.tsx";
 import Footer from "./layouts/Footer/footer.tsx";
 import ChatExpert from "./components/ChatExpert/index.tsx";
+import ScrollToTop from "./components/ScrollToTop/index.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter basename="/">
+      <ScrollToTop />
       <Header />
       <App />
       <Footer />

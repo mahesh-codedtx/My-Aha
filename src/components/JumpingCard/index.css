@@ -25,7 +25,7 @@
   border-radius: 0px 0px 0px 10px;
 }
 .premium-text {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: normal;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -52,8 +52,14 @@
   white-space: nowrap;
   padding: 0px 10px;
 }
+
+.card-footer-text-container {
+  text-align: left;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
 .single-image-text {
-  width: 160px;
   font-size: 16px;
   color: #fff;
   text-overflow: ellipsis;
@@ -61,4 +67,21 @@
   overflow-wrap: break-word;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.adult-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: var(--card-footer-tag-white-space, nowrap);
+  box-sizing: var(--card-footer-tag-box-sizing, border-box);
+  padding: 0 5px;
+  border-radius: 5px;
+  height: 18px;
+  min-width: 22px;
+  width: fit-content;
+  font-size: 10px;
+  font-weight: var(--card-footer-tag-font-weight, normal);
+  font-family: var(--card-footer-tag-font-family, inherit);
+  background: linear-gradient(rgb(59, 64, 70) 9.38%, rgb(45, 48, 55));
+  color: #fff;
 }
